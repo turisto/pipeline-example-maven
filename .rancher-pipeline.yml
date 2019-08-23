@@ -12,6 +12,8 @@ stages:
       tag: example-greenhouse:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
       registry: https://nexus.rancher.ardfactory.com/repository/docker-group/
+      env:
+        PLUGIN_INSECURE: true
 - name: Deploy
   steps:
   - applyYamlConfig:
