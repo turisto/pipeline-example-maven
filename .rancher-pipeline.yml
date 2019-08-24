@@ -11,7 +11,7 @@ stages:
       buildContext: .
       tag: example-greenhouse:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
-      registry: dc-j9k6p
+      registry: turisto
 - name: Deploy
   steps:
   - applyYamlConfig:
