@@ -11,7 +11,7 @@ stages:
       buildContext: .
       tag: example-greenhouse:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
-      registry: registry-1.docker.io/turisto
+      registry: hub.docker.com/turisto
 - name: Deploy
   steps:
   - applyYamlConfig:
