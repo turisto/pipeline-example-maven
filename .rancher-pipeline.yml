@@ -10,9 +10,7 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: example-greenhouse:${CICD_EXECUTION_SEQUENCE}
-      registry: turisto
-    env:
-      PLUGIN_INSECURE: "true"
+      registry: container.rancher.ardfactory.com
 - name: Deploy
   steps:
   - applyYamlConfig:
