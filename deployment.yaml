@@ -27,12 +27,11 @@ spec:
       labels:
         app: greenhouse
     spec:
-      envFrom:
-        - secretRef:
-            name: sample
-            optional: false
       containers:
       - name: maven
         image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+        envFrom:
+        - secretRef:
+            name: sample
         ports:
         - containerPort: 8080
