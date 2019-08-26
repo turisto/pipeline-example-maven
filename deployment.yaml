@@ -27,8 +27,10 @@ spec:
       labels:
         app: greenhouse
     spec:
-      imagePullSecrets:
-      - name: sample
+      envFrom:
+        - secretRef:
+            name: sample
+            optional: false
       containers:
       - name: maven
         image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
