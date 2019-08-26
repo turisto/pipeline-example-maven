@@ -12,8 +12,4 @@ stages:
       tag: example-greenhouse:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
       registry: container.rancher.ardfactory.com
-- name: Deploy
-  steps:
-  - applyYamlConfig:
-      path: ./deployment.yaml
 notification: {}
