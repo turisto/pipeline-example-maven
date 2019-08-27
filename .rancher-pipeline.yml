@@ -4,6 +4,13 @@ stages:
   - runScriptConfig:
       image: maven:3-jdk-7
       shellScript: mvn clean install
+    envFrom:
+      - sourceName: my-secret
+        sourceKey: secret-key
+        targetKey: MVN_USERNAME
+      - sourceName: my-secret
+        sourceKey: secret-password
+        targetKey: MVN_PASSWORD
 - name: Publish
   steps:
   - publishImageConfig:
